@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+
+set_include_path(implode(PATH_SEPARATOR, array(
+    get_include_path(),
+	__DIR__ . '/../vendor', // for bin/ when invoked from git repo clone
+	__DIR__ . '/../../..',  // for vendor/bin when installed via Composer
+)));
+require 'autoload.php';
+
+use Elazar\GitLabHud\Command;
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\ConsoleOutput;
+use Symfony\Component\Console\Output\OutputInterface;
+
+$app = new Silly\Edition\PhpDi\Application('GitLab HUD', '0.1');
+
+$container = $app->getContainer();
+$container->set(InputInterface::class, DI\object(ArgvInput::class));
+$container->set(OutputInterface::class, DI\object(ConsoleOutput::class));
+
+$app->command('show [path]', $container->get(Command\Show::class));
+
+$container->call([$app, 'run']);

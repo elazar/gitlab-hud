@@ -1,0 +1,29 @@
+{
+    "name": "elazar/gitlab-hud",
+    "description": "A personal heads up display for GitLab",
+    "require": {
+        "cpliakas/git-wrapper": "^1.7",
+        "m4tthumphrey/php-gitlab-api": "^7.15",
+        "mnapoli/silly": "^1.6",
+        "mnapoli/silly-php-di": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthew Turland",
+            "email": "me@matthewturland.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Elazar\\GitLabHud\\": "src"
+        }
+    },
+    "bin": [
+        "bin/gitlab-hud"
+    ]
+}
