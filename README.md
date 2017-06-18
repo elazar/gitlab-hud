@@ -28,7 +28,7 @@ gitlab-hud show path/to/repo
 
 ## Roadmap
 
-* Listing and option to branches for merged or closed merge requests
+* Listing of and option to delete branches for merged or closed merge requests
 
 ## License
 
