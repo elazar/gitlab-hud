@@ -4,8 +4,8 @@
     "require": {
         "cpliakas/git-wrapper": "^1.7",
         "m4tthumphrey/php-gitlab-api": "^7.15",
-        "mnapoli/silly": "^1.6",
-        "mnapoli/silly-php-di": "^1.1"
+        "mnapoli/silly-php-di": "^1.1",
+        "php-di/php-di": "^5"
     },
     "license": "MIT",
     "authors": [
